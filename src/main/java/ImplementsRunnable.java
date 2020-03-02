@@ -1,4 +1,15 @@
-package PACKAGE_NAME;
+public class ImplementsRunnable implements Runnable {
+    private Counter counter;
 
-public class ImplementsRunnable {
+    public ImplementsRunnable(Counter counter) {
+        this.counter = counter;
+    }
+
+    @Override
+    public void run() {
+        while (counter.getCount() < 100) {
+            counter.increment();
+            System.out.println("Thread 2:" + counter.getCount());
+        }
+    }
 }
