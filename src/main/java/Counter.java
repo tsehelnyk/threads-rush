@@ -1,5 +1,5 @@
 public class Counter {
-    private int count;
+    private volatile int count;
 
     public Counter() {
         count = 0;
